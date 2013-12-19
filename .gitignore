@@ -20,9 +20,16 @@ release.properties
 pom.xml.*
 
 #Ant
+<<<<<<< HEAD
 build.xml
+=======
+>>>>>>> Make up project as android studio styled
 local.properties
 proguard.cfg
 
 #OSX
 .DS_Store
+
+# Gradle
+.gradle
+build/
