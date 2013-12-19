@@ -30,3 +30,18 @@ android {
 dependencies {
     compile 'com.android.support:support-v4:19.0.0'
 }
+
+def repos = new File(rootDir, "repository")
+
+apply plugin: 'maven'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository url: "file://${repos.absolutePath}"
+            pom.version = '2.1.1'
+            pom.groupId = 'com.handmark.pulltorefresh.library'
+            pom.artifactId = 'library'
+        }
+    }
+}
